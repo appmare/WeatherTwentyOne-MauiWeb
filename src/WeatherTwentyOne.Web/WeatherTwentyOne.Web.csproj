@@ -9,12 +9,22 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WeatherTwentyOne\WeatherTwentyOne.csproj" />
-    <PackageReference Include="AppMare.MauiWeb" Version="1.0.3" />
+    <PackageReference Include="AppMare.MauiWeb" Version="1.0.5" />
   </ItemGroup>
 
   <ItemGroup>
     <!-- The app's fonts, images and raw files, served from Resources/ (each app head packs them its own way). -->
     <None Include="..\WeatherTwentyOne\Resources\**" CopyToOutputDirectory="PreserveNewest" Link="Resources\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Keeps XAML and bindings working in a NativeAOT publish (dotnet publish -p:PublishAot=true). -->
+    <TrimmerRootAssembly Include="Microsoft.Maui.Controls" />
+    <TrimmerRootAssembly Include="Microsoft.Maui.Controls.Xaml" />
+    <TrimmerRootAssembly Include="Microsoft.Maui" />
+    <TrimmerRootAssembly Include="MauiWeb" />
+    <TrimmerRootAssembly Include="MauiWeb.Controls" />
+    <TrimmerRootAssembly Include="WeatherTwentyOne" />
   </ItemGroup>
 
 </Project>
