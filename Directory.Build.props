@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <!-- .NET MAUI 11 stable -->
+    <MauiVersion>11.0.0</MauiVersion>
+    <DotNetVersion>11.0.0</DotNetVersion>
+    <NoWarn>$(NoWarn);CA2252</NoWarn>
+  </PropertyGroup>
+</Project>

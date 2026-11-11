@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WeatherTwentyOne.Web": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5323",
+      "environmentVariables": { "ASPNETCORE_ENVIRONMENT": "Development" }
+    }
+  }
+}

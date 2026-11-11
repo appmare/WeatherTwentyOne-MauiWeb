@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>WeatherTwentyOne.Web</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherTwentyOne\WeatherTwentyOne.csproj" />
+    <PackageReference Include="AppMare.MauiWeb" Version="1.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The app's fonts, images and raw files, served from Resources/ (each app head packs them its own way). -->
+    <None Include="..\WeatherTwentyOne\Resources\**" CopyToOutputDirectory="PreserveNewest" Link="Resources\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
